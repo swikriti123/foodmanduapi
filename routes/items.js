@@ -12,7 +12,8 @@ router.post('/create',(req,res,next)=>{
         resturant:req.body.resturant,
         image:req.body.image
     }).then((callbacks)=>{
-        res.json( {status:"item created successfully"});
+        res.json( {status:"item created successfully",callback:callbacks});
+        console.log(callbacks);
     }).catch(next);
 
 });

@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.options('*',cors());
 app.use(express.urlencoded({extended:true}));
-app.use(express.static(__dirname+"/public"));
+app.use(express.static(__dirname+"/public/uploads"));
 
 //mongoose connection 
 mongoose.connect(process.env.URL,{useNewUrlParser:true, useUnifiedTopology:true})
